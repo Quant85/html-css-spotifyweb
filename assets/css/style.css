@@ -13,6 +13,7 @@
 
 /* Color ad Typografhy */
 
+
 h1::first-letter,
 h2::first-letter,
 h3::first-letter,
@@ -289,8 +290,12 @@ footer#site_footer {
   z-index: 3;
 }
 
+footer a {
+  text-decoration: none;
+}
+/* playing_left */
 .playing_bar_left {
-  max-width: 250px;
+  max-width: calc(230px - 12px);
   align-items: center;  
 }
 .playing_bar_left img {
@@ -312,8 +317,78 @@ footer#site_footer {
 .icon_left {
   width: 25%;
   font-size: 14px;
+
+}
+
+.icon_left a{
+  color: #717171;
 }
 
 .icon_left .favorites {
-  margin-right: 10px;
+  margin: 0 10px;
+}
+/* playing_left */
+
+/* playing_centert */
+.playing_bar_center{
+  width: calc( 100% - 230px);
+  border: 1px solid red;
+  align-content: center;
+  justify-content: center;
+
+}
+
+.player_controls {
+  width: 80%;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid blue;
+}
+
+.control_button {
+  vertical-align: middle;
+}
+
+.player_controls_buttons>a:not(:nth-of-type(3)) {
+  color: #fff;
+  font-size: 14px;
+}
+.player_controls_buttons>a:nth-of-type(3) {
+  color: #fff;
+  font-size: 30px;
+}
+
+.player_controls_buttons>a>.play,
+.player_controls_buttons>a:first-of-type,
+.player_controls_buttons>a:last-of-type {
+  margin: 0 14px;
+}
+
+/*  .player_controls_line */
+.player_controls_line {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(0, 255, 128);
+}
+
+span.current_time,
+span.song_duration {
+  min-width: 40px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+span.progress_line{
+  background-color: #A3A3A3;
+  content: "";
+  height: 4px;
+  border-radius: 5px;
+  position: relative;
+  min-width: 60%;
+  border-bottom: 1px solid grey;
 }

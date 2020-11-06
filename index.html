@@ -264,13 +264,50 @@
             </a>
           </div>
           <div class="icon_left d-flex wrap">
-            <i class="favorites far fa-heart"></i>
-            <i class="my_list far fa-folder"></i>
+            <a href=""><i class="favorites far fa-heart"></i></a>
+            <a href=""><i class="my_list far fa-folder"></i></a>
           </div>
           <!-- /.icon_left -->
           <!-- /.info_box -->
         </div>
-        <div class="playing_bar_center">player</div>
+        <div class="playing_bar_center d-flex">
+          <div class="player_controls d-flex wrap">
+            <div class="player_controls_buttons">
+              <a href="" class="control_button">
+                <i class="fas fa-random"></i>
+              </a>
+              <!-- /.control_button -->
+              <a href="" class="control_button">
+                <i class="fas fa-step-backward"></i>
+              </a>
+              <!-- /.control_button -->
+              <a href="" class="control_button">
+                <i class="play far fa-play-circle"></i>
+              </a>
+              <!-- /.control_button -->
+              <a href="" class="control_button">
+                <i class="fas fa-step-forward"></i>
+              </a>
+              <!-- /.control_button -->
+              <a href="" class="control_button">
+                <i class="fas fa-redo"></i>
+              </a>
+              <!-- /.control_button -->
+            </div>
+
+            <!-- /.player_controls_line -->
+            <div class="player_controls_line d-flex">
+              <span class="current_time">0:25</span>
+              <span class="progress_line"></span>
+              <span class="song_duration">4:35</span>
+            </div>
+            <!-- /.player_controls_line -->
+            <!-- /.player_controls_buttons -->
+
+          </div>
+          <!-- /.player_controls -->
+
+        </div>
         <div class="playing_bar_right">player</div>
       </footer>
       <!-- /#site_footer.playing_bar -->
