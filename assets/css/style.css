@@ -331,7 +331,7 @@ footer a {
 
 /* playing_centert */
 .playing_bar_center{
-  width: calc( 100% - 230px);
+  width: calc( 100% - 250px - 24px);
   border: 1px solid red;
   align-content: center;
   justify-content: center;
@@ -382,13 +382,35 @@ span.song_duration {
   letter-spacing: normal;
   text-transform: none;
 }
-
+/* progress_line */
 span.progress_line{
-  background-color: #A3A3A3;
+  background-color: #ffffff;
   content: "";
-  height: 4px;
+  height: 6px;
   border-radius: 5px;
   position: relative;
   min-width: 60%;
   border-bottom: 1px solid grey;
 }
+
+span.progress_line_active {
+  content: "";
+  height: 6px;
+  border-radius: 10px;
+  min-width: 25%;
+  background-color: #24e40b;
+  border-bottom: 2px solid rgb(126, 126, 126);
+}
+
+span.progress_line_active_point {
+  content: "";
+  height: 10px;
+  width: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 1px solid rgb(133, 133, 133);
+  box-shadow: 0 0 15px #19064e;
+  align-self: center;
+}
+
+/* progress_line */
