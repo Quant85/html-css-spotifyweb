@@ -58,7 +58,7 @@ body {
 }
 
 .container {
-  height: calc(100% - 60px);
+  max-height: calc(100% - 80px + 3px);
   min-width: 100vw;
   background-color: #141922;
 }
@@ -111,7 +111,7 @@ li:hover>a.aside_link{
 a.aside_link>.aside_icon {
   width: 24px;
   vertical-align: text-bottom;
-  margin: 0 16px;
+  margin: 0 8px 0 16px;
 }
 section.playlist {
   min-height: 30%;
@@ -139,8 +139,8 @@ section.playlist li{
   margin-top: 16px;
 }
 .create_playlist .add_playlist {
-  font-size: 32px;
-  margin-right: 16px;
+  font-size: 42px;
+  margin-right: 8px;
   color: #000000;
   background-color: #A3A3A3;
   vertical-align: middle;
@@ -333,7 +333,8 @@ footer a {
 
 /* playing_centert */
 .playing_bar_center{
-  width: calc( 100% - 460px - 24px);
+  width: calc( 100% - 460px - 12px);
+  min-width: 230px;
   border: 1px solid red;
   align-content: center;
   justify-content: center;
@@ -341,7 +342,7 @@ footer a {
 }
 
 .player_controls {
-  width: 80%;
+  width: 100%;
   align-items: center;
   flex-direction: column;
   border: 1px solid blue;
@@ -352,11 +353,11 @@ footer a {
 }
 
 .player_controls_buttons>a:not(:nth-of-type(3)) {
-  color: #fff;
+  color: #535353;
   font-size: 14px;
 }
 .player_controls_buttons>a:nth-of-type(3) {
-  color: #fff;
+  color: #b3b3b3;
   font-size: 30px;
 }
 
@@ -409,15 +410,18 @@ span.progress_volume_active {
 span.progress_line_active_point,
 span.progress_volume_active_point {
   content: "";
-  height: 8px;
-  width: 8px;
+  height: 6.8px;
+  width: 6.8px;
   background-color: #b3b3b3;
   border-radius: 50%;
   border: 1px solid rgb(133, 133, 133);
   box-shadow: 0 0 15px #19064e;
   align-self: center;
 }
-
+span.progress_line_active:hover,
+span.progress_volume_active:hover {
+  background-color: #1db954;
+}
 /* progress_line */
 /* ********* "Ricorda che quando osservi l'ignoto, ******
 ************* anche anche lui sta osservando te!!"  ****/
