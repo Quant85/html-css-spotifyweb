@@ -22,7 +22,7 @@ h6::first-letter,
 p::first-letter,
 li::first-letter,
 a::first-letter,
-#site_header>.btn_upgrade::first-letter{
+#site_header>.btn_upgrade::first-letter {
   text-transform: uppercase;
 }
 
@@ -30,7 +30,7 @@ a::first-letter,
   text-transform: uppercase;
 }
 .text_capitalize {
-  text-transform: capitalize;
+  text-transform: capitalize !important;
 }
 /* Utility Class */
 .d-flex {
@@ -79,12 +79,11 @@ aside a,
 aside.nav_left {
   min-width: 230px;
   background-color: #000000;
-  padding: 0 24px;
   flex-direction: column;
 }
 
 .logo_box {
-  padding-left: 24px;
+  text-align: center;
   margin: 24px 0 18px 0;
 }
 
@@ -94,7 +93,7 @@ aside.nav_left {
 
 li.btn_link {
   width: 100%;
-  padding: 10px 8px;
+  padding: 10px 0px;
   list-style: none;
 }
 
@@ -105,6 +104,7 @@ a.aside_link{
   font-weight: 700;
   line-height: 16px;
   border-left: 2px solid transparent;
+  padding: 10px 0;
 }
 li:hover>a.aside_link{
   border-left: 2px solid yellowgreen;
@@ -116,32 +116,64 @@ a.aside_link>.aside_icon {
   margin: 0 16px;
 }
 section.playlist {
-  margin-left: 24px;
+  min-height: 30%;
+  flex-direction: column;
+  flex-basis: 0%;
+  flex-shrink: 0;
+  flex-grow: 1;
+  position: relative;
 }
 section.playlist li{
   list-style: none;
 }
-aside .item {
-  text-transform: capitalize ;
-}
-.playlist{
-  height: 100%;
-  position: relative;
-}
+
 .playlist_box {
-/*   overflow-y: scroll;
-  overflow-x: hidden; */
+  height: 100%;
+  flex-direction: column;
+  margin: 24px 24px 0 24px;
+}
+
+.create_playlist {
+  height: 42px;
+  color: #fff;
+  background-color: transparent;
+  opacity: 1;
+  margin-top: 16px;
+}
+.create_playlist .add_playlist {
+  font-size: 32px;
+  margin-right: 16px;
+  color: #000000;
+  background-color: #A3A3A3;
+  vertical-align: middle;
+}
+
+.create_playlist span{
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: normal;
+  text-transform: none;
 }
 
 .playlist_box .created {
-  max-height: 300px;
+  margin-top: 16px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 300px;
 }
+.playlist_box .created>li{
+  text-transform: capitalize;
+  padding: 7px 7px;
+}
+
 .aside_bottom {
-  position: absolute;
-  bottom: 0;
+  z-index: 2;
+  background-color: #000000;
+  margin: 0 24px;
 }
 .install_app {
-  padding: 12px;
+  padding: 12px 0;
   border-bottom: 1px solid grey;
 }
 
@@ -255,4 +287,5 @@ footer#site_footer {
   color: aliceblue;
   font-size: 48px;
   justify-content: space-around;
+  z-index: 3;
 }
