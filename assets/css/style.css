@@ -277,6 +277,7 @@ nav.top_main {
 
 /* Footer */
 footer#site_footer {
+  min-width: 620px;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -294,7 +295,8 @@ footer a {
   text-decoration: none;
 }
 /* playing_left */
-.playing_bar_left {
+.playing_bar_left,
+.playing_bar_right {
   max-width: calc(230px - 12px);
   align-items: center;  
 }
@@ -331,7 +333,7 @@ footer a {
 
 /* playing_centert */
 .playing_bar_center{
-  width: calc( 100% - 250px - 24px);
+  width: calc( 100% - 460px - 24px);
   border: 1px solid red;
   align-content: center;
   justify-content: center;
@@ -383,30 +385,33 @@ span.song_duration {
   text-transform: none;
 }
 /* progress_line */
-span.progress_line{
-  background-color: #ffffff;
+span.progress_line,
+span.progress_volume {
+  background-color: #535353;
   content: "";
-  height: 6px;
-  border-radius: 5px;
-  position: relative;
+  height: 4px;
+  border-radius: 4px;
   min-width: 60%;
   border-bottom: 1px solid grey;
+
 }
 
-span.progress_line_active {
+span.progress_line_active,
+span.progress_volume_active {
   content: "";
-  height: 6px;
-  border-radius: 10px;
+  height: 4px;
+  border-radius: 4px;
   min-width: 25%;
-  background-color: #24e40b;
+  background-color: #b3b3b3;
   border-bottom: 2px solid rgb(126, 126, 126);
 }
 
-span.progress_line_active_point {
+span.progress_line_active_point,
+span.progress_volume_active_point {
   content: "";
-  height: 10px;
-  width: 10px;
-  background-color: #ffffff;
+  height: 8px;
+  width: 8px;
+  background-color: #b3b3b3;
   border-radius: 50%;
   border: 1px solid rgb(133, 133, 133);
   box-shadow: 0 0 15px #19064e;
@@ -414,3 +419,32 @@ span.progress_line_active_point {
 }
 
 /* progress_line */
+/* ********* "Ricorda che quando osservi l'ignoto, ******
+************* anche anche lui sta osservando te!!"  ****/
+.playing_bar_right {
+  width: 100%;
+  border: 1px solid rgb(0, 255, 242);
+}
+
+div.other_controls {
+  width: 100%;
+  border: 1px solid yellow;
+}
+
+.spoticon-queue-16,
+.spoticon-devices-16,
+.spoticon-volume-twowave-16 {
+  background-color: transparent;
+  border: none;
+  color: #b3b3b3;
+  width: 32px;
+  min-width: 32px;
+}
+
+.volume_line {
+  width: 100%;
+  align-items: center;
+}
+
+
+/* playing_bar_right */
