@@ -11,13 +11,15 @@
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animation.css">
 </head>
   <body>
     <div class="site_wrapper d-flex">
       <main id="site_main" class="container d-flex">
         <aside class="nav_left d-flex">
           <div class="logo_box">
-            <img src="assets/img/aside/logo/logo.svg" alt="">
+            <img class="logo_spotify" src="assets/img/aside/logo/logo.svg" alt="">
+            <img class="logo_spotify_mobile" src="assets/img/aside/logo/logo-small.svg" alt="">
           </div>
           <!-- /.logo -->
           <ul class="nav_aside">
@@ -43,7 +45,9 @@
 
           <section class="playlist d-flex">
             <div class="playlist_box d-flex">
-              <h3 class="title text_uppcase">playlist</h3>
+              <a href="#">
+                <h3 class="title text_uppcase">playlist</h3>
+              </a>
               <!-- /.title -->
 
               <!---.create_playlist  -->
@@ -60,7 +64,10 @@
 
               <!---.created  -->
               <ul class="created">
-                <li><a href="" class="item">nuova playlist</a></li>
+                <li>
+                  <a href="" class="item" active="active">nuova playlist</a>
+                  <span class="spoticon-volume-16"></span>
+                </li>
                 <li>
                   <a href="" class="item">nuova playlist</a>
                   <!-- /.item -->
@@ -111,7 +118,7 @@
         </aside>
         <!-- /.nav_left -->
         <header id="site_header" class="top_banner d-flex">
-          <a class="btn_upgrade" href="">
+          <a class="btn_upgrade text_uppcase" href="">
               effettua l'upgrade
           </a>  
         </header>
@@ -119,81 +126,145 @@
 
         <div class="content d-flex">
           <nav class="top_main d-flex wrap">
-            <a href="#" class="link">in evidenza</a>
-            <a href="#" class="link">podcast</a>
-            <a href="#" class="link">classifiche</a>
-            <a href="#" class="link">generi e mood</a>
-            <a href="#" class="link">nuove uscite</a>
-            <a href="#" class="link">scopri</a>  
+            <a href="#" class="link d-flex wrap">
+              in evidenza
+              <span class="link_bottom_line"></span>
+            </a>
+            <a href="#" class="link d-flex wrap">
+              podcast
+              <span class="link_bottom_line"></span>
+            </a>
+            <a href="#" class="link d-flex wrap">
+              classifiche
+              <span class="link_bottom_line"></span>
+            </a>
+            <a href="#" class="link d-flex wrap">
+              generi e mood
+              <span class="link_bottom_line"></span>
+            </a>
+            <a href="#" class="link d-flex wrap">
+              nuove uscite
+              <span class="link_bottom_line"></span>
+            </a>
+            <a href="#" class="link d-flex wrap">
+              scopri
+              <span class="link_bottom_line"></span>
+            </a>  
           </nav>
           <!-- /.top_main -->
           <section id="recently_played">
-            <h2>recently played</h2>
-            <div class="albums_box d-flex">
-              <figure class="album_box">
-                <img src="assets/img/main/recently/metal_lifting.jpg" alt="">
-                <figcaption>
+            <div class="box_text p_20">
+              <h2 class="cursor_def">recently played</h2>
+            </div>
+            <div class="albums_box d-flex wrap">
+
+              <figure class="album_box d-flex wrap">
+                <div class="over_box">
                   <a href="">
-                    <h3 class="text_capitalize">heavy metal</h3>
+                    <i class="play_song far fa-play-circle"></i>
                   </a>
-                  <a href="">
-                    <h4 class="text_capitalize">subtitle</h4>
-                  </a>                
+                  <a href="#">
+                    <img src="assets/img/main/recently/metal_lifting.jpg" alt="">            
+                  </a>
+                </div>
+                <figcaption>
+                    <h3 class="text_capitalize">
+                      <a href="">heavy metal</a>
+                    </h3>
+                    <h4 class="text_capitalize">
+                      <a href="">subtitle</a>
+                    </h4>             
                 </figcaption>
               </figure>
-              <figure class="album_box">
-                <img src="assets/img/main/recently/stranger.jpg" alt="">
+
+              <figure class="album_box d-flex wrap">
+                <div class="over_box">
+                  <a href="">
+                    <i class="play_song far fa-play-circle"></i>
+                  </a>
+                  <a href="#">
+                    <img src="assets/img/main/recently/stranger.jpg" alt="">
+                  </a>
+                </div>
                 <figcaption>
-                  <a href="">
-                    <h3 class="text_capitalize">stranger things, vol. 1(a netflix original series soundtrack)</h3>
-                  </a>
-                  <a href="">
-                    <h4 class=" text_capitalize">kyle dixon & michael stein</h4>
-                  </a>
+                    <h3 class="text_capitalize" title="Stranger Things, Vol. 1 (A Netflix Original Series Soundtrack) ">
+                      <a href="">stranger things, vol. 1 (a netflix original series soundtrack) </a>
+                    </h3>
+                    <h4 class=" text_capitalize">
+                      <a href="">kyle dixon & michael stein </a>
+                    </h4>
                 </figcaption>
               </figure>
-              <figure class="album_box">
-                <img src="assets/img/main/recently/aquietplace.jpeg" alt="">
-                <figcaption>
+
+              <figure class="album_box d-flex wrap">
+                <div class="over_box">
                   <a href="">
-                    <h3>Title</h3>
+                    <i class="play_song far fa-play-circle"></i>
                   </a>
-                  <a href="">
-                    <h4 class="text_uppcase">subtitle</h4>
+                  <a href="#">
+                    <img src="assets/img/main/recently/aquietplace.jpeg" alt="">
                   </a>
+                </div>
+                <figcaption >
+                    <h3> <a href="">a quiet place </a></h3>
+                    <h4 class="text_capitalize">
+                      <a href="">subtitle </a>
+                    </h4>
                 </figcaption>
               </figure>
-              <figure class="album_box">
-                <img src="assets/img/main/recently/split.jpeg" alt="">
+
+              <figure class="album_box d-flex wrap">
+                <div class="over_box">
+                  <a href="">
+                    <i class="play_song far fa-play-circle"></i>
+                  </a>
+                  <a href="#">
+                    <img src="assets/img/main/recently/split.jpeg" alt="">
+                  </a>
+                </div>
                 <figcaption>
-                  <a href="">
-                    <h3>Title</h3>
-                  </a>
-                  <a href="">
-                    <h4 class="text_uppcase">subtitle</h4>
-                  </a>
+                    <h3><a href="">split </a></h3>
+                    <h4 class="text_capitalize">
+                      <a href="">subtitle </a>
+                    </h4>
                 </figcaption>
               </figure>
-              <figure class="album_box">
-                <img src="assets/img/main/recently/cure.jpeg" alt="">
+
+              <figure class="album_box d-flex wrap">
+                <div class="over_box">
+                  <a href="">
+                    <i class="play_song far fa-play-circle"></i>
+                  </a>
+                  <a href="#">
+                    <img src="assets/img/main/recently/cure.jpeg" alt="">
+                  </a>
+                </div>
                 <figcaption>
-                  <a href="">
-                    <h3>Title</h3>
-                  </a>
-                  <a href="">
-                    <h4 class="text_uppcase">subtitle</h4>
-                  </a>
+                    <h3>
+                      <a href="">a cure for wellness </a>
+                    </h3>
+                    <h4 class="text_capitalize">
+                      <a href="">subtitle</a>
+                    </h4>
                 </figcaption>
               </figure>
-              <figure class="album_box">
-                <img src="assets/img/main/recently/sinister.jpeg" alt="">
+
+              <figure class="album_box d-flex wrap">
+                <div class="over_box">
+                  <a href="">
+                    <i class="play_song far fa-play-circle"></i>
+                  </a>
+                  <a href="">
+                    <img src="assets/img/main/recently/sinister.jpeg" alt="">
+                  </a>
+                </div>
                 <figcaption>
-                  <a href="">
-                    <h3>Title</h3>
-                  </a>
-                  <a href="">
-                    <h4 class="text_uppcase">subtitle</h4>
-                  </a>
+                    <h3> 
+                      <a href="">sinister</a>
+                    </h3>
+                    <h4 class="text_capitalize">
+                      <a href="">subtitle </a>
+                    </h4>
                 </figcaption>
               </figure>
             </div>
@@ -203,22 +274,40 @@
           <section id="for_you">
 
             <!-- l' uomo la cui reale identità è sconosciuta e va mantenuta tale -->
-            <h2>creato per John Doe</h2>
+            <div class="box_text p_20">
+                <h2 class="cursor_def">creato per John Doe</h2>
+                <h4 class="text_capitalize cursor_def">subtitle</h4>
+            </div>
+            <!-- /.box_text -->
             <div class="albums_box d-flex">
-              <figure class="album_box">
-                <img src="assets/img/main/for_you/radar.jpeg" alt="">
-                <figcaption>
+              <figure class="album_box d-flex wrap">
+                <div class="over_box">
                   <a href="">
-                    <h3>Title</h3>
+                    <i class="play_song far fa-play-circle"></i>
                   </a>
+                  <a href="#">
+                    <img src="assets/img/main/for_you/radar.jpeg" alt="">
+                  </a>
+                </div>
+                <figcaption>
+                    <h3 class="text_capitalize"> 
+                      <a href="">release radar </a>
+                    </h3>
                 </figcaption>
               </figure>
-              <figure class="album_box">
-                <img src="assets/img/main/for_you/mixdaily.jpeg" alt="">
-                <figcaption>
+              <figure class="album_box d-flex wrap">
+                <div class="over_box">
                   <a href="">
-                    <h3>Title</h3>
+                    <i class="play_song far fa-play-circle"></i>
                   </a>
+                  <a href="#">
+                    <img src="assets/img/main/for_you/mixdaily.jpeg" alt="">
+                  </a>
+                </div>
+                <figcaption>
+                    <h3 class="text_capitalize"> 
+                      <a href="">daily mix 1 </a>
+                    </h3>
                 </figcaption>
               </figure>
             </div>
@@ -228,22 +317,43 @@
           <section id="popular_artists">
 
             <!-- l' uomo la cui reale identità è sconosciuta e va mantenuta tale -->
-            <h2>creato per John Doe</h2>
+            <div class="box_text p_20">
+                <h2> 
+                  <a href="">artisti più popolari </a>
+                </h2>
+                <h4 class="text_capitalize">
+                  <a href="">più ascolti, più accurati saranno i suggerimenti. </a>
+                </h4>
+            </div>
             <div class="albums_box d-flex">
-              <figure class="album_box">
-                <img src="assets/img/main/popular_artists/youg.jpeg" alt="">
-                <figcaption>
+              <figure class="album_box d-flex wrap">
+                <div class="over_box">
                   <a href="">
-                    <h3>Lana del Rey</h3>
+                    <i class="play_song far fa-play-circle"></i>
                   </a>
+                  <a href="#">
+                    <img src="assets/img/main/popular_artists/youg.jpeg" alt="">
+                  </a>
+                </div>
+                <figcaption>
+                    <h3> 
+                      <a href="">Lana del Rey </a>
+                    </h3>
                 </figcaption>
               </figure>
-              <figure class="album_box">
-                <img src="assets/img/main/popular_artists/einaudi.jpeg" alt="">
-                <figcaption>
+              <figure class="album_box d-flex wrap">
+                <div class="over_box">
                   <a href="">
-                    <h3>Ludovico Enaudi</h3>
+                    <i class="play_song far fa-play-circle"></i>
                   </a>
+                  <a href="#">
+                    <img src="assets/img/main/popular_artists/einaudi.jpeg" alt="">
+                  </a>
+                </div>
+                <figcaption>
+                    <h3>
+                      <a href="">Ludovico Enaudi </a>
+                    </h3>
                 </figcaption>
               </figure>
             </div>
@@ -256,7 +366,9 @@
       <!-- /#site_main.container -->
       <footer id="site_footer" class="playing_bar_container d-flex">
         <div class="playing_bar_left d-flex">
-          <img src="assets/img/footer_play/fioridichernobil.jpg" alt="">
+          <a href="#">
+            <img src="assets/img/footer_play/fioridichernobil.jpg" alt="">
+          </a>
           <div class="info_box d-flex wrap">
             <a href="">Fiori di Chernobil</a>
             <a href="">

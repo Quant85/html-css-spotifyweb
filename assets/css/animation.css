@@ -1,0 +1,50 @@
+/* ***top_banner*** */
+.btn_upgrade:hover {
+    transform: scale(1.06); 
+}
+/*** top_banner ***/
+
+/* ***nav.top_main*** */
+nav.top_main a.link:hover .link_bottom_line {
+    display: inline-block;
+    filter: contrast(2.3);
+}
+/**** nav.top_main ****/
+
+/* ***content*** */
+/* img-card */
+.over_box:hover img {
+    opacity: 0.6;
+    filter: contrast(10%), hue-rotate(25deg);
+}
+
+.over_box:hover a>.play_song {
+    display: block;
+}
+
+a>.play_song:hover {
+    background-color: #717171;
+    color: rgb(255, 255, 255);
+    border-radius: 25%;
+    filter: contrast(0.8);
+    box-shadow: 0 0 0px 2.5px #1bd954, 0 0 0px 4px #00cc41;
+    font-size: 60px;
+    padding: 2px;
+}
+
+a>.play_song:active {
+    background-color: #10af3f;
+    border-radius: 50%;
+}
+/* img-card */
+/**** content ****/
+
+
+/*******************
+*   #site_footer   * 
+********************/
+
+.control_button:hover svg{
+    color: #b3b3b3;
+    transform: scale(1.06);
+}

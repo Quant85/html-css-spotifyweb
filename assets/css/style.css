@@ -1,8 +1,15 @@
 
 @import url("../font/stylesheet.css");
-
+@import url("./mediaquery.css") (max-width: 768px), (max-width: 992px) and (min-width: 769px);
 /* font import */
 
+/*  dichiarazioni --var */
+:root {
+  --y-top-banner: 60px;
+  --y-nav-top-main: 60px;
+  --x-aside-nav-left: 230px;
+  --n-box: 6;
+}
 /* Reset rules */
 
 * {
@@ -12,7 +19,21 @@
 }
 
 /* Color ad Typografhy */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.max_w_fit_c,
+.box_text {
+  max-width: max-content;
+}
 
+h4 {
+  font-weight: 300;
+  padding: 10px 5px;
+}
 
 h1::first-letter,
 h2::first-letter,
@@ -22,8 +43,7 @@ h5::first-letter,
 h6::first-letter,
 p::first-letter,
 li::first-letter,
-a::first-letter,
-#site_header>.btn_upgrade::first-letter {
+a::first-letter {
   text-transform: uppercase;
 }
 
@@ -33,6 +53,10 @@ a::first-letter,
 .text_capitalize {
   text-transform: capitalize !important;
 }
+
+.cursor_def {
+  cursor: default;
+}
 /* Utility Class */
 .d-flex {
   display: flex;
@@ -40,6 +64,13 @@ a::first-letter,
 
 .wrap {
   flex-wrap: wrap;
+}
+
+.p_10 {
+  padding: 10px;
+}
+.p_20 {
+  padding: 20px;
 }
 /* --------- */
 
@@ -58,14 +89,11 @@ body {
 }
 
 .container {
-  max-height: calc(100% - 80px + 3px);
+  max-height: calc(100% - var(--y-top-banner) - 10px);
   min-width: 100vw;
   background-color: #141922;
 }
 
-
-
-/* nav.top_main */
 .nav_aside .aside_link,
 #site_header>.btn_upgrade,
 aside a,
@@ -84,15 +112,19 @@ aside.nav_left {
 }
 
 .logo_box {
-  margin: 24px 0 18px 12px;
+  margin: 12px 0 12px 12px;
 }
 .logo_box img {
   height: 40px;
 }
 
+.logo_spotify_mobile {
+  display: none;
+}
+
 li.btn_link {
   width: 100%;
-  padding: 10px 0px;
+  padding-top: 5px;
   list-style: none;
 }
 
@@ -105,8 +137,8 @@ a.aside_link{
   padding: 10px 0;
 }
 li:hover>a.aside_link{
-  border-left: 2px solid yellowgreen;
-  filter: grayscale(80%);
+  border-left: 2px solid #1db954;
+  filter: contrast(2.3);
 }
 a.aside_link>.aside_icon {
   width: 24px;
@@ -128,7 +160,7 @@ section.playlist li{
 .playlist_box {
   height: 100%;
   flex-direction: column;
-  margin: 24px 24px 0 24px;
+  margin: 30px 24px 0 24px;
 }
 
 .create_playlist {
@@ -165,6 +197,15 @@ section.playlist li{
   padding: 7px 7px;
 }
 
+.playlist_box .created>li span:first-of-type {
+  padding-left: 10px;;
+  display: none;
+}
+.playlist_box .created>li>a.item:active+span:first-of-type {
+  display: inline-block !important;
+}
+
+
 .aside_bottom {
   z-index: 2;
   background-color: #000000;
@@ -199,33 +240,36 @@ section.playlist li{
 
 /* top_banner */
 #site_header.top_banner {
-  width: calc(100% - 230px);
-  height: 90px;
-  background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(246, 246, 247, 0) 0%, rgba(16, 16, 33, 0.6670869031206232) 38%, rgba(0, 0, 0, 1) 100%);
+  width: calc(100% - var(--x-aside-nav-left));
+  height: var(--y-top-banner);
+  background: linear-gradient(0deg, rgba(22, 21, 27, 0) 0%, rgba(33, 33, 36, 0) 2%, rgba(18, 18, 18, 0.667) 0%, rgba(18, 18, 18, 1) 20%);
   position: fixed;
   top: 0;
   right: 0;
   padding-right: 20px;
   justify-content: flex-end;
-  z-index: 0;
+  z-index: 15;
 }
 
 .btn_upgrade {
-  background-color: transparent;
-  border: 1px solid white;
+  background-color: rgba(0, 0, 0, .7);
+  border: 1px solid hsla(0, 0%, 100%, .7);
   align-self: center;
-  padding: 8px 14px;
+  padding: 8px 34px;
   margin-right: 20px;
-  border-radius: 20px;
+  border-radius: 500px;
+  letter-spacing: 1.76px;
   font-family: 'Circular Sp UI v3 T Book';
-  font-weight: 500;
+  font-weight: 700;
+  line-height: 18px;
+  transition: all 33ms cubic-bezier(.3, 0, 0, 1);
 }
 /* top_banner */
 
 /* content */
 div.content {
   width: 100%;
-  padding-top: 90px;
+  padding-top: 60px;
   align-items: flex-start;
   flex-direction: column;
   overflow-y: scroll;
@@ -237,35 +281,98 @@ div.content {
   width: 100%;
   align-self: flex-start;
 }
-.content h2 {
-  padding: 20px;
-}
 
 .content img {
   width: 100%;
   padding: 0 10px;
+  filter: contrast(1.2);
+  box-shadow: 0 4px 60px rgba(0, 0, 0, .2);
 }
 
 /* nav.top_main */
 nav.top_main {
   min-width: 60%;
-  height: 60px; 
   align-self: center;
-  justify-content: space-around;
-/*   background-color: aqua; */
+  justify-content: center;
   text-transform: uppercase;
-  padding: 20px;
+  text-align: center;
+  padding: 5px;
+}
+nav.top_main a.link {
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px 10px 10px;
+}
+nav.top_main .link_bottom_line {
+  content: "";
+  width: 30px;
+  height: 2px;
+  margin-top: 4px;
+  background-color: hsl(141, 73%, 42%);
+  display: none;
 }
 
 /* nav.top_main */
 
+
+/* .content */
+/* recently_played */
 .albums_box {
   padding: 10px;
 }
 .album_box {
-  width: calc(100% / 6);
+  width: calc(100% / var(--n-box));
   text-align: center;
+  position: relative;
+  flex-direction: column;
 }
+
+.over_box {
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.over_box>a {
+  width: 100%;
+  height: 100%;
+  background-color: #141922;
+  z-index: 1;
+
+}
+.album_box a>.play_song {
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: none;
+}
+
+figcaption {
+  width: 100%;
+  padding: 10px;
+}
+
+figcaption h3,
+figcaption h4 {
+  margin: auto;
+}
+
+figcaption h3 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: normal;
+}
+figcaption h4 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: normal;
+}
+/* recently_played */
 
 /* .content section.for_you */
 
@@ -273,7 +380,7 @@ nav.top_main {
   border-radius: 50%;
 }
 
-
+/* .content */
 
 /* Footer */
 footer#site_footer {
@@ -288,7 +395,7 @@ footer#site_footer {
   font-size: 48px;
   padding: 12px;
   justify-content: space-between;
-  z-index: 3;
+  z-index: 20;
 }
 
 footer a {
@@ -314,6 +421,9 @@ footer a {
   font-size: 14px;
   text-decoration: none;
   letter-spacing: .015em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .icon_left {
@@ -326,8 +436,9 @@ footer a {
   color: #717171;
 }
 
-.icon_left .favorites {
-  margin: 0 10px;
+.icon_left .favorites,
+.icon_left .my_list {
+  margin-left: 10px;
 }
 /* playing_left */
 
@@ -335,7 +446,6 @@ footer a {
 .playing_bar_center{
   width: calc( 100% - 460px - 12px);
   min-width: 230px;
-  border: 1px solid red;
   align-content: center;
   justify-content: center;
 
@@ -345,7 +455,6 @@ footer a {
   width: 100%;
   align-items: center;
   flex-direction: column;
-  border: 1px solid blue;
 }
 
 .control_button {
@@ -372,7 +481,6 @@ footer a {
   width: 100%;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgb(0, 255, 128);
 }
 
 span.current_time,
@@ -426,14 +534,15 @@ span.progress_volume_active:hover {
 /* ********* "Ricorda che quando osservi l'ignoto, ******
 ************* anche anche lui sta osservando te!!"  ****/
 .playing_bar_right {
+  justify-content: flex-end;
+}
+.playing_bar_right,
+div.other_controls,
+.volume_line {
   width: 100%;
-  border: 1px solid rgb(0, 255, 242);
 }
 
-div.other_controls {
-  width: 100%;
-  border: 1px solid yellow;
-}
+
 
 .spoticon-queue-16,
 .spoticon-devices-16,
@@ -446,9 +555,87 @@ div.other_controls {
 }
 
 .volume_line {
-  width: 100%;
   align-items: center;
 }
 
 
 /* playing_bar_right */
+
+/* MediaQuery */
+
+@media screen and (max-width: 575px) {
+  :root {
+    --n-box: 2;
+    --x-aside-nav-left: 52px;
+  }
+
+  aside.nav_left {
+    min-width: 52px;
+    padding: 0 0px 0 12px;
+  }
+  .logo_box {
+    margin: 12px 0 0 0;
+  }
+
+  .logo_spotify_mobile {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+  }
+
+  .logo_spotify,
+  .install_app span,
+  .user_account span,
+  .aside_link span,
+  .playlist {
+    display: none;
+  }
+  .aside_bottom {
+    position: absolute;
+    bottom: 90px;
+  }
+
+  .aside_bottom, 
+  a.aside_link>.aside_icon {
+    margin: 0;
+  }
+  .install_app {
+    border-bottom: 0px ;
+  }
+
+  .progress_volume {
+    min-width: 50%!important;
+  }
+
+  .player_controls_line {
+    width: 80%;
+  }
+
+
+}
+/* sm- >=576px */
+@media screen and (max-width: 769px) and (min-width: 576px) {
+  :root {
+    --n-box: 2;
+  }
+
+  .player_controls_line {
+    width: 80%;
+  }
+}
+/* md- >=992px */
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  :root {
+    --n-box: 4;
+  }
+
+}
+@media screen and (max-width: 1370px) {
+
+  figcaption h3,
+  figcaption h4 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
