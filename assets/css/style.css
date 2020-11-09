@@ -545,6 +545,7 @@ span.progress_volume_active {
 span.progress_line:hover span.progress_line_active,
 span.progress_volume:hover span.progress_volume_active{
   background-color: #1db954;
+  cursor: pointer;
 }
 
 span.progress_line_active_point,
@@ -562,6 +563,7 @@ span.progress_volume_active_point {
 span.progress_line:hover span.progress_line_active_point,
 span.progress_volume:hover span.progress_volume_active_point {
   display: inline-block;
+  cursor: pointer;
 
 }
 
