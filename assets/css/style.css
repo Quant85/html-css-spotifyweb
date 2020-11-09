@@ -606,11 +606,6 @@ div.other_controls,
   align-items: center;
 }
 
-audio {
-
-}
-
-
 /* MediaQuery */
 @media screen and (max-width: 340px) {
 

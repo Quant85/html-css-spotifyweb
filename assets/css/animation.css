@@ -2,7 +2,6 @@
 /* ***top_banner*** */
 li.btn_link:hover {
     background-color: hsla(0, 0%, 100%, .1);
-    font-size: 16px;
 }
 
 li:hover>a.aside_link {
