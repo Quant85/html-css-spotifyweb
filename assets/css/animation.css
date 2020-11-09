@@ -14,8 +14,6 @@ li:hover>a.aside_link {
 
 .playlist_box .created>li i.spoticon-play-16:active {
     color: #1bd954;
-    border: 1px solid #10af3f;
-    border-radius: 50%;
 }
 
 .playlist_box .created>li>a.item:active+span:first-of-type {
