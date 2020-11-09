@@ -54,6 +54,10 @@ a::first-letter {
   text-transform: capitalize !important;
 }
 
+.pl_10 {
+  padding-left: 10px;
+}
+
 .cursor_def {
   cursor: default;
 }
@@ -136,10 +140,7 @@ a.aside_link{
   border-left: 2px solid transparent;
   padding: 10px 0;
 }
-li:hover>a.aside_link{
-  border-left: 2px solid #1db954;
-  filter: contrast(2.3);
-}
+
 a.aside_link>.aside_icon {
   width: 24px;
   vertical-align: text-bottom;
@@ -197,14 +198,14 @@ section.playlist li{
   padding: 7px 7px;
 }
 
+.playlist_box .created>li:not(:nth-child(2))>.item {
+    color: #717171;
+}
+
 .playlist_box .created>li span:first-of-type {
   padding-left: 10px;;
   display: none;
 }
-.playlist_box .created>li>a.item:active+span:first-of-type {
-  display: inline-block !important;
-}
-
 
 .aside_bottom {
   z-index: 2;
@@ -522,6 +523,10 @@ span.progress_volume_active {
   background-color: #b3b3b3;
   border-bottom: 2px solid rgb(126, 126, 126);
 }
+span.progress_line:hover span.progress_line_active,
+span.progress_volume:hover span.progress_volume_active{
+  background-color: #1db954;
+}
 
 span.progress_line_active_point,
 span.progress_volume_active_point {
@@ -533,11 +538,14 @@ span.progress_volume_active_point {
   border: 1px solid rgb(133, 133, 133);
   box-shadow: 0 0 15px #19064e;
   align-self: center;
+  display: none;
 }
-span.progress_line_active:hover,
-span.progress_volume_active:hover {
-  background-color: #1db954;
+span.progress_line:hover span.progress_line_active_point,
+span.progress_volume:hover span.progress_volume_active_point {
+  display: inline-block;
+
 }
+
 /* progress_line */
 /* ********* "Ricorda che quando osservi l'ignoto, ******
 ************* anche anche lui sta osservando te!!"  ****/

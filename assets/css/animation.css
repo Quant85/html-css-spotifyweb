@@ -1,3 +1,16 @@
+
+/* ***top_banner*** */
+li:hover>a.aside_link {
+    color: #717171;
+    border-left: 2px solid #1db954;
+    filter: contrast(2.3);
+}
+
+.playlist_box .created>li>a.item:active+span:first-of-type {
+    display: inline-block !important;
+}
+/* ***top_banner*** */
+
 /* ***top_banner*** */
 .btn_upgrade:hover {
     transform: scale(1.06); 
