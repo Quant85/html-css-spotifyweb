@@ -695,6 +695,28 @@ div.other_controls,
   .playlist {
     display: none;
   }
+
+  .nav_aside>li.btn_link {
+    margin-bottom: 5px;
+  }
+
+  .nav_aside>li.btn_link:nth-of-type(1)>a {
+    border: 1px solid #1db954;
+    border-radius: 20%;
+    padding: 4px;
+    background-color: #6d6d6da1;
+    transition: all 0.15s ease-in 0.05s;
+  }
+
+  li:hover>a.aside_link {
+    border: 1px solid #1db954;
+    filter: contrast(2.3);
+    padding: 4px;
+    background-color: #6d6d6da1;
+    border-radius: 20%;
+    transition: all 0.15s ease-in 0.05s;
+  }
+
   .aside_bottom {
     position: absolute;
     bottom: 90px;
