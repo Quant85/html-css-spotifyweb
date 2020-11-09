@@ -131,6 +131,10 @@ li.btn_link {
   padding-top: 5px;
   list-style: none;
 }
+.nav_aside>li.btn_link:nth-of-type(1)>a {
+  border-left: 2px solid #1db954;
+  filter: contrast(2.3);
+}
 
 a.aside_link{
   min-width: 100%;
@@ -145,6 +149,10 @@ a.aside_link>.aside_icon {
   width: 24px;
   vertical-align: text-bottom;
   margin: 0 8px 0 16px;
+}
+
+.nav_aside>li.btn_link:not(:first-of-type) span {
+  color: #717171;
 }
 section.playlist {
   min-height: 30%;
@@ -202,6 +210,13 @@ section.playlist li{
     color: #717171;
 }
 
+.playlist_box .created>li i.spoticon-play-16 {
+  border: 1px solid #10af3f;
+  border-radius: 50%;
+  visibility: hidden;
+  margin-left: 5px;
+}
+
 .playlist_box .created>li span:first-of-type {
   padding-left: 10px;;
   display: none;
@@ -214,7 +229,7 @@ section.playlist li{
 }
 .install_app {
   padding: 12px 0;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #717171;
 }
 
 .install_app img,
@@ -225,6 +240,10 @@ section.playlist li{
 
 .install_app img {
   width: 18px;
+}
+
+.install_app span {
+    color: #717171;
 }
 .user_account{
   margin: 8px 0 5px 0;
