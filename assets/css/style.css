@@ -470,6 +470,40 @@ footer a {
 /* playing_left */
 
 /* playing_centert */ /* verificare se ad  aside viene assegnato il 30% */
+
+
+/* prova modifica tag <audio> mediante pseudo selettori DOM */
+audio {
+  width: 85px;
+  height: 20px;
+  position: absolute;
+  z-index: 22;
+  left: 50%;
+  top: 0%;
+  transform: translateX(-10%);
+}
+audio::-webkit-media-controls {
+  color: transparent;
+}
+
+audio::-webkit-media-controls-enclosure {
+/*   background: transparent; */
+}
+
+audio::-webkit-media-controls-play-button {
+  background-color: transparent;
+  color: transparent;
+}
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-timeline,
+audio::-webkit-media-controls-volume-control-container {
+  display: none;
+}
+
+/* prova modifica tag <audio> mediante pseudo selettori DOM */
+
+
 .playing_bar_center{
   width: calc(100% - (var(--minX-aside-nav-left) * 2 ) - 12px);
   min-width: var(--minX-aside-nav-left);
@@ -479,6 +513,7 @@ footer a {
 
 .player_controls_buttons {
   margin-bottom: 5px;
+  z-index: 21;
 }
 
 .player_controls {
