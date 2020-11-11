@@ -453,24 +453,13 @@
       </footer>
       <!-- /#site_footer.playing_bar -->
     </div>
+
+    
+    <!-- soluzione 1 modivica mediante pseudo selettori DOM dei componenti control del player HTML5  <audio>  facendolo sovrapporre all'icona play-->
+    <!-- soluzione 2 mediante script per play/pause audio -->
+    <script src="./assets/js/main.js" type="text/javascript"></script>
   </body>
 </html>
 
-<!-- soluzione 1 modivica mediante pseudo selettori DOM dei componenti control del player HTML5  <audio>  facendolo sovrapporre all'icona play-->
-<!-- soluzione 2 mediante script per play/pause audio -->
-<script type="text/javascript">
-  var playAudio = document.getElementById('play-audio');
 
-  var playPause = function () {
-    if (playAudio.paused) {
-
-          playAudio.play();
-          }
-
-    else {
-          playAudio.pause();
-
-          }
-  }
-</script>
 
