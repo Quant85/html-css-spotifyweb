@@ -77,7 +77,22 @@ a::first-letter {
   padding: 20px;
 }
 /* --------- */
-
+/* ::-webkit-scrollbar */
+::-webkit-scrollbar {
+  width: 20px;
+  min-height: 30px;
+  max-height: none;
+  background: hsla(0,0%,100%,.3);
+  transition: background-color .2s;
+}
+::-webkit-scrollbar:hover {
+  background: hsla(0, 0%, 100%, .7);
+}
+::-webkit-scrollbar-thumb {
+  height: 50px;
+  background: #ddd;
+  border-radius: 8px;
+}
 /* --------- */
 body {
   font-size: 14px;
