@@ -10,4 +10,4 @@ var playPause = function () {
         playAudio.pause();
 
         }
-    }
+    };
